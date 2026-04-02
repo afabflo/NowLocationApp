@@ -11,7 +11,7 @@ El proyecto utiliza una arquitectura limpia y las últimas bibliotecas recomenda
 - **UI Moderna:** Diseño basado en **Material 3** con Dark Mode nativo, gradientes dinámicos y componentes personalizados.
 - **Categorización:** Clasificación de lugares por tipo de plan (Comer, Noche, Visitar, Relax).
 
-## 🛠️Stack Tecnológico
+## Stack Tecnológico
 
 - **Lenguaje:** [Kotlin](https://kotlinlang.org/)
 - **UI:** [Jetpack Compose](https://developer.android.com/jetpack/compose) (Declarative UI)
