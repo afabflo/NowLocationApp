@@ -33,10 +33,10 @@ fun  NavHostScreen(navHostController: NavHostController){
             val ciudadSeleccionada = backStackEntry.arguments?.getString("ciudad") ?: ""
             WheelScreen(ciudadSeleccionada,onCategoriaClick={cat -> navHostController.navigate("listado/$ciudadSeleccionada/$cat")})
         }
-        composable(Routes.Listado) {
-            backStackentry -> val ciudad = backStackentry.arguments?.getString("ciudad") ?: ""
-            val categoria = backStackentry.arguments?.getString("categoria") ?: ""
-            DetallesScreen(ciudad,categoria)
+        composable(Routes.Listado) { backStackEntry ->
+            val ciudad = backStackEntry.arguments?.getString("ciudad") ?: ""
+            val categoria = backStackEntry.arguments?.getString("categoria") ?: ""
+            DetallesScreen(ciudad, categoria)
         }
 
 

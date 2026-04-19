@@ -3,20 +3,22 @@ package com.example.nowlocationn.repository
 import javax.inject.Inject
 import javax.inject.Singleton
 
-
 @Singleton
 class SearchRepositorio @Inject constructor() {
 
-    //Lista (harcodeada) para el prototipo
-    private val ciudades = listOf("Málaga", "Madrid", "Granada", "Barcelona", "Mallorca")
-    //Funcion que filtra segun lo que el usuario escribe
-    fun getSugerencias(query:String) : List<String> {
-        return if(query.length >= 2){
-            return ciudades.filter { it.contains(query, ignoreCase = true) }
-        }else{
-            emptyList()
-        }
+    // Simulación de una base de datos más amplia
+    private val todasLasCiudades = listOf(
+        "Málaga", "Madrid", "Granada", "Barcelona", "Mallorca",
+        "Valencia", "Sevilla", "Bilbao", "Zaragoza", "Alicante",
+        "Murcia", "Córdoba", "Vigo", "Gijón"
+    )
+
+    // El repositorio ahora devuelve un Flow o simplemente filtra eficientemente
+    fun getSugerencias(query: String): List<String> {
+        if (query.length < 2) return emptyList()
+
+        return todasLasCiudades.filter {
+            it.contains(query, ignoreCase = true)
+        }.sorted() // Ordenar alfabéticamente queda mucho más profesional
     }
-
-
 }
