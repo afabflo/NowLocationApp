@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "553048151733",
+    "project_id": "nowlocation-1834b",
+    "storage_bucket": "nowlocation-1834b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553048151733:android:bedbcdd1e54d2337f0d0fc",
+        "android_client_info": {
+          "package_name": "com.example.nowlocationn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL2EeWmos-QErv3Ax4Q97mlvKiO4jv4Kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3,8 +3,13 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
+    id("kotlin-kapt")
     alias(libs.plugins.kapt)
+    id("kotlin-parcelize")
+    id("com.google.gms.google-services")
     alias(libs.plugins.kotlin.parcelize)
+
+
 }
 
 android {
@@ -47,6 +52,21 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+// Conversor GSON (para que Retrofit entienda el JSON)
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    //SerializedName
+    implementation("com.google.code.gson:gson:2.10.1")
+    // Retrofit: Cliente HTTP profesional
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    // GSON Converter: Para convertir JSON a Objetos Kotlin automáticamente
+    // Hilt (Ya deberías tenerlo, pero asegúrate de la versión)
+    implementation("com.google.dagger:hilt-android:2.48")
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.6.0")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-analytics-ktx")
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
@@ -60,6 +80,10 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     implementation(libs.hilt.android)
+    //añadidas
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
     kapt(libs.hilt.android.compiler)
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.hilt.navigation.compose)
